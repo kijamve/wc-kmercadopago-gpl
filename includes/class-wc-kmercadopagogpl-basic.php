@@ -407,7 +407,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 					$wc->session = new WC_Session_Handler();
 					$wc->session->init();
 				}
-				$wc->session->set( 'woocommere-kmercadopagogpl-alert', __( 'No fue posible procesar el pago, intente más tarde o utiliza otro medio de pago.', 'woocommere-kmercadopagogpl' ) );
+				$wc->session->set( 'woocommere-kmercadopagogpl-alert', __( 'The payment could not be processed, please try again later or use another payment method.', 'woocommere-kmercadopagogpl' ) );
 				return $order->get_cancel_order_url();
 			}
 			WC_KMercadoPagoGPL_Manager::set_metadata(
@@ -550,7 +550,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$order = new WC_Order( $order_id );
 			if ( 'redirect' === $this->method ) {
 				if ( WC_KMercadoPagoGPL_Manager::get_instance()->get_on_hold() ) {
-					$order->update_status( 'on-hold', __( 'MercadoPago: Esperando pago.', 'woocommerce-kmercadopagogpl' ) );
+					$order->update_status( 'on-hold', __( 'MercadoPago: Wait payment.', 'woocommerce-kmercadopagogpl' ) );
 				}
 				return array(
 					'result'   => 'success',
