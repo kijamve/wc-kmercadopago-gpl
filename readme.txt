@@ -1,5 +1,5 @@
 === MercadoPago Tools GPL for WooCommerce ===
-Contributors: @kijamve
+Contributors: kijam
 Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
 Tested up to: 5.8
@@ -33,7 +33,7 @@ Automatic Installation by WordPress admin
 Done! It will be in the "Installed Plugins" section and from there you can activate it.
 
 Manual Installation
-1. Download the [zip] (https://github.com/kijamve/woocommerce-kmercadopago-gpl/releases now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/woocommerce-kmercadopago-gpl/)
+1. Download the [zip] (https://github.com/kijamve/woocommerce-kmercadopago-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/woocommerce-kmercadopago-gpl/)
 2. Unzip the folder and rename it to ”woocommerce-kmercadopago-gpl”
 3. Copy the "woocommerce-kmercadopago-gpl" file into your WordPress directory, inside the "Plugins" folder.
 
