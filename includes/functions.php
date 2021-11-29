@@ -159,7 +159,7 @@ function kmercadopagogpl_set_device_id_cb() {
 		$wc->session = new WC_Session_Handler();
 		$wc->session->init();
 	}
-	$wc->set( 'woocommere-kmercadopagogpl-device-id', sanitize_text_field( wp_unslash( $_POST['kmercadopagogpl_device_id'] ) ) );
+	$wc->session->set( 'woocommere-kmercadopagogpl-device-id', sanitize_text_field( wp_unslash( $_POST['kmercadopagogpl_device_id'] ) ) );
 	echo 'SET-DEVICE-ID';
 	exit;
 }
