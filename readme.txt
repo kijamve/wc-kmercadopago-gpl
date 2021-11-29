@@ -1,5 +1,5 @@
-=== Mercado Pago payments for WooCommerce ===
-Contributors: mercadopago, mercadolivre, claudiosanches, marcelohama
+=== MercadoPago Tools GPL for WooCommerce ===
+Contributors: @kijamve
 Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
 Tested up to: 5.8
