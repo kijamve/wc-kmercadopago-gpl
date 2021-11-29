@@ -572,11 +572,14 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 		 * Output for the order received page.
 		 *
 		 * @param float $price Current Price.
+		 * @param bool  $echo Dump result or return.
 		 * @return string
 		 */
-		public function showCalculatorInstallment( $price ) {
+		public function showCalculatorInstallment( $price, $echo = false ) {
 			$rate = WC_KMercadoPagoGPL_Manager::get_instance()->get_convertion_rate( get_woocommerce_currency(), $this->setting['CURRENCY'] );
-			ob_start();
+			if ( ! $echo ) {
+				ob_start();
+			}
 			?>
 			<script>
 				var product_price_mpgpl = <?php echo (float) $price; ?>;
@@ -594,9 +597,12 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 				</div>
 			</div>
 			<?php
-			$out = ob_get_contents();
-			ob_end_clean();
-			return $out;
+			if ( ! $echo ) {
+				$out = ob_get_contents();
+				ob_end_clean();
+				return $out;
+			}
+			return '';
 		}
 
 		/**

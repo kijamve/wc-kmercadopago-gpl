@@ -405,7 +405,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			?>
 			<table width="70%" style="width:70%">
 			<?php
-			self::showLabelMetabox( $order_id, 'last_mp_status', __( 'Actual Status' ) );
+			self::showLabelMetabox( $order_id, 'last_mp_status', __( 'Actual Status', 'wc-kmp-gpl' ) );
 			self::showLabelMetabox( $order_id, 'Amount Paid', __( 'Amount Paid', 'wc-kmp-gpl' ), true );
 			self::showLabelMetabox( $order_id, 'Amount of Shipping', __( 'Amount of Shipping', 'wc-kmp-gpl' ), true );
 			self::showLabelMetabox( $order_id, 'Amount of Fee', __( 'Amount of Fee', 'wc-kmp-gpl' ), true );
@@ -600,8 +600,8 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			$wpdb = WC_KMercadoPagoGPL::woocommerce_wpdb();
 			self::$cache_metadata[ $order_id . '-' . $key ] = $value;
 			if ( ! property_exists( $wpdb, 'woo_kmercadopagogpl' ) ) {
-				$table_name = $wpdb->prefix . 'woo_kmercadopagogpl';
-				$wpdb->woo_kmercadopagogpl = sanitize_key( $table_name );
+				$table_name                = $wpdb->prefix . 'woo_kmercadopagogpl';
+				$wpdb->woo_kmercadopagogpl = $table_name;
 			}
 			$exists = $wpdb->get_var( $wpdb->prepare( "SELECT `id` FROM `{$wpdb->woo_kmercadopagogpl}` WHERE `order_id` = %d AND `key` = %s LIMIT 1", (int) $order_id, $key ) );
 			if ( $exists ) {
@@ -643,10 +643,10 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				return self::$cache_metadata[ $order_id . '-' . $key ];
 			}
 			if ( ! property_exists( $wpdb, 'woo_kmercadopagogpl' ) ) {
-				$table_name = $wpdb->prefix . 'woo_kmercadopagogpl';
-				$wpdb->woo_kmercadopagogpl = sanitize_key( $table_name );
+				$table_name                = $wpdb->prefix . 'woo_kmercadopagogpl';
+				$wpdb->woo_kmercadopagogpl = $table_name;
 			}
-			$data       = $wpdb->get_var( $wpdb->prepare( "SELECT `data` FROM `{$wpdb->woo_kmercadopagogpl}` WHERE `order_id` = %d AND `key` = %s LIMIT 1", (int) $order_id, $key ) );
+			$data = $wpdb->get_var( $wpdb->prepare( "SELECT `data` FROM `{$wpdb->woo_kmercadopagogpl}` WHERE `order_id` = %d AND `key` = %s LIMIT 1", (int) $order_id, $key ) );
 			self::debug( "get_metadata [order:$order_id]: [$key] | Result: " . self::pL( $data, true ) );
 			self::$cache_metadata[ $order_id . '-' . $key ] = $data ? json_decode( $data, true ) : false;
 			return self::$cache_metadata[ $order_id . '-' . $key ];
@@ -659,7 +659,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		 */
 		public static function check_database() {
 			$wpdb       = WC_KMercadoPagoGPL::woocommerce_wpdb();
-			$table_name = sanitize_key( $wpdb->prefix . 'woo_kmercadopagogpl' );
+			$table_name = $wpdb->prefix . 'woo_kmercadopagogpl';
 			if ( ! property_exists( $wpdb, 'woo_kmercadopagogpl' ) ) {
 				$wpdb->woo_kmercadopagogpl = $table_name;
 			}
@@ -764,7 +764,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				$posted = self::stdclass_to_array( $posted );
 			}
 			if ( ! class_exists( 'WC_KMP_MpMutex' ) ) {
-				include_once 'class-WC_KMP_MpMutex.php';
+				include_once 'class-wc-kmp-mpmutex.php';
 			}
 			$mutex = new WC_KMP_MpMutex( dirname( __FILE__ ) . '/.mercadopago' );
 			while ( ! $mutex->lock() ) {

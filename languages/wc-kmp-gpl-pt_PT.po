@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Tools for MercadoPago and WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-29 03:14+0000\n"
-"PO-Revision-Date: 2021-11-29 22:39+0000\n"
+"PO-Revision-Date: 2021-11-29 23:03+0000\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese (Portugal)\n"
 "Language: pt_PT\n"
@@ -41,6 +41,10 @@ msgstr "Ative o MercadoPago"
 msgid "Activate the plugin by converting the amounts to MercadoPago currency"
 msgstr "Ative o plugin convertendo os valores para a moeda do MercadoPago"
 
+#: includes/class-wc-kmercadopagogpl-manager.php:408
+msgid "Actual Status"
+msgstr "Situação atual"
+
 #: includes/data-settings-mercadopagogpl-basic.php:32
 msgid "Add a description to this payment method."
 msgstr "Adicione uma descrição a este método de pagamento."
@@ -49,19 +53,19 @@ msgstr "Adicione uma descrição a este método de pagamento."
 msgid "Add the name to MercadoPago that will be shown to the customer."
 msgstr "Adicione ao MercadoPago o nome que será mostrado ao cliente."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:401
+#: includes/class-wc-kmercadopagogpl-manager.php:411
 msgid "Amount of Fee"
 msgstr "Valor da taxa"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:399
+#: includes/class-wc-kmercadopagogpl-manager.php:410
 msgid "Amount of Shipping"
 msgstr "Quantidade de envio"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:397
+#: includes/class-wc-kmercadopagogpl-manager.php:409
 msgid "Amount Paid"
 msgstr "Quantia paga"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:1430
+#: includes/class-wc-kmercadopagogpl-manager.php:1451
 #: includes/data-settings-mercadopagogpl-manager.php:21
 msgid "aquí"
 msgstr "aquí"
@@ -86,7 +90,7 @@ msgstr "Brasil"
 msgid "Calculate"
 msgstr "Calcular"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:492
+#: includes/class-wc-kmercadopagogpl-basic.php:491
 msgid "Cancel order &amp; restore cart"
 msgstr "Cancelar o pedido e restaurar o carrinho"
 
@@ -98,8 +102,8 @@ msgstr "Método de verificação"
 msgid "Chile"
 msgstr "Chile"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:675
-#: includes/class-wc-kmercadopagogpl-manager.php:684
+#: includes/class-wc-kmercadopagogpl-manager.php:697
+#: includes/class-wc-kmercadopagogpl-manager.php:706
 msgid "Click here to configure it!"
 msgstr "Clique aqui para configurá-lo!"
 
@@ -153,7 +157,7 @@ msgstr "Configure os seguintes métodos após salvar as alterações nesta seç�
 msgid "Convert using Manual Rate %1$s a %2$s"
 msgstr "Converter usando taxa manual %1$s para %2$s"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:413
+#: includes/class-wc-kmercadopagogpl-manager.php:417
 msgid "Credit / Debit Card"
 msgstr "Cartão de Crédito / Débito"
 
@@ -205,7 +209,7 @@ msgstr ""
 "Exibe uma calculadora de parcelamento no produto quando você deseja pagar "
 "com cartão de crédito"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:367
+#: includes/class-wc-kmercadopagogpl-manager.php:381
 msgid "DNI"
 msgstr "DNI"
 
@@ -255,7 +259,7 @@ msgid "Enter the percentage of commission you want to charge your clients."
 msgstr ""
 "Insira a porcentagem de comissão que você deseja cobrar de seus clientes."
 
-#: includes/class-wc-kmercadopagogpl-basic.php:534
+#: includes/class-wc-kmercadopagogpl-basic.php:531
 msgid "Error on MercadoPago"
 msgstr "Erro no MercadoPago"
 
@@ -271,7 +275,7 @@ msgstr "Honorários: %s"
 msgid "Fixed amount of Commission in %s"
 msgstr "Quantidade fixa de Comissão em %s"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:495
+#: includes/class-wc-kmercadopagogpl-basic.php:494
 msgid "Go to cart"
 msgstr "Vá para o carrinho"
 
@@ -299,15 +303,15 @@ msgstr "Tipo de identificação"
 msgid "Indicate the maximum number of quotas available to your clients"
 msgstr "Indique o número máximo de cotas disponíveis para seus clientes"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:535
+#: includes/class-wc-kmercadopagogpl-basic.php:532
 msgid "Internal server error"
 msgstr "Erro do Servidor Interno"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:533
+#: includes/class-wc-kmercadopagogpl-basic.php:530
 msgid "Invalid Credit Card Number"
 msgstr "Número de cartão de crédito inválido"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:537
+#: includes/class-wc-kmercadopagogpl-basic.php:534
 msgid "Invalid setting"
 msgstr "Configuração inválida"
 
@@ -328,7 +332,7 @@ msgstr "Deixar pedidos com pagamento Aceito em Concluído"
 msgid "Leave unpaid orders in \"on-hold\" status"
 msgstr "Deixe os pedidos não pagos no status \"em espera\""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:536
+#: includes/class-wc-kmercadopagogpl-basic.php:533
 msgid "Loading..."
 msgstr "Carregando..."
 
@@ -352,9 +356,9 @@ msgid "MercadoPago"
 msgstr "MercadoPago"
 
 #. %s: ISO of invalid Corrency.
-#: includes/class-wc-kmercadopagogpl-manager.php:675
-#: includes/class-wc-kmercadopagogpl-manager.php:684
-#: includes/class-wc-kmercadopagogpl-manager.php:731
+#: includes/class-wc-kmercadopagogpl-manager.php:697
+#: includes/class-wc-kmercadopagogpl-manager.php:706
+#: includes/class-wc-kmercadopagogpl-manager.php:753
 msgid "MercadoPago Disable"
 msgstr "Desativar MercadoPago"
 
@@ -362,24 +366,16 @@ msgstr "Desativar MercadoPago"
 msgid "MercadoPago Tools GPL"
 msgstr "MercadoPago Tools GPL"
 
-#. Name of the plugin
-msgid "Tools for MercadoPago and WooCommerce"
-msgstr "MercadoPago Tools GPL para WooCommerce"
-
-#. Description of the plugin
-msgid "Tools for MercadoPago and WooCommerce by Kijam"
-msgstr "MercadoPago Tools GPL para WooCommerce por Kijam"
-
-#: includes/class-wc-kmercadopagogpl-manager.php:892
+#: includes/class-wc-kmercadopagogpl-manager.php:914
 msgid "MercadoPago: A dispute has started over the payment."
 msgstr "MercadoPago: Começou uma disputa pelo pagamento."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:893
+#: includes/class-wc-kmercadopagogpl-manager.php:915
 msgid "MercadoPago: A dispute has started."
 msgstr "MercadoPago: Uma disputa começou."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:864
-#: includes/class-wc-kmercadopagogpl-manager.php:868
+#: includes/class-wc-kmercadopagogpl-manager.php:886
+#: includes/class-wc-kmercadopagogpl-manager.php:890
 msgid "MercadoPago: Payment approved."
 msgstr "MercadoPago: Pagamento aprovado."
 
@@ -387,35 +383,35 @@ msgstr "MercadoPago: Pagamento aprovado."
 msgid "MercadoPago: Payment canceled due to non-payment."
 msgstr "MercadoPago: Pagamento cancelado por falta de pagamento."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:880
+#: includes/class-wc-kmercadopagogpl-manager.php:902
 msgid "MercadoPago: payment rejected, user must try again."
 msgstr "MercadoPago: pagamento rejeitado, o usuário deve tentar novamente."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:881
+#: includes/class-wc-kmercadopagogpl-manager.php:903
 msgid "MercadoPago: Payment rejected."
 msgstr "MercadoPago: Pagamento rejeitado."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:876
+#: includes/class-wc-kmercadopagogpl-manager.php:898
 msgid "MercadoPago: The payment is in review."
 msgstr "MercadoPago: O pagamento está em revisão."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:889
+#: includes/class-wc-kmercadopagogpl-manager.php:911
 msgid "MercadoPago: The payment was cancelled."
 msgstr "MercadoPago: O pagamento foi cancelado."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:884
+#: includes/class-wc-kmercadopagogpl-manager.php:906
 msgid "MercadoPago: The payment was returned to the customer."
 msgstr "MercadoPago: O pagamento foi devolvido ao cliente."
 
-#: includes/class-wc-kmercadopagogpl-basic.php:553
+#: includes/class-wc-kmercadopagogpl-basic.php:550
 msgid "MercadoPago: Wait payment."
 msgstr "MercadoPago: Aguarde o pagamento."
 
-#: includes/class-wc-kmercadopagogpl-basic.php:483
+#: includes/class-wc-kmercadopagogpl-basic.php:481
 msgid "MercadoPago: Wait payment..."
 msgstr "MercadoPago: Aguarde o pagamento ..."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:411
+#: includes/class-wc-kmercadopagogpl-manager.php:416
 msgid "Method of payment"
 msgstr "Método de pagamento"
 
@@ -427,12 +423,12 @@ msgstr "México"
 msgid "Modal"
 msgstr "Modal"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:415
+#: includes/class-wc-kmercadopagogpl-manager.php:418
 msgid "Name printed on Credit / Debit Card"
 msgstr "Nome impresso no cartão de crédito / débito"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:1154
 #: includes/class-wc-kmercadopagogpl-manager.php:1175
+#: includes/class-wc-kmercadopagogpl-manager.php:1196
 msgid "Not Available"
 msgstr "Não disponível"
 
@@ -455,13 +451,13 @@ msgstr "Disponível apenas no MercadoPago Tools Pro"
 msgid "Order %s"
 msgstr "Pedido %s"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:380
-#: includes/class-wc-kmercadopagogpl-manager.php:403
-#: includes/class-wc-kmercadopagogpl-manager.php:784
+#: includes/class-wc-kmercadopagogpl-manager.php:394
+#: includes/class-wc-kmercadopagogpl-manager.php:412
+#: includes/class-wc-kmercadopagogpl-manager.php:806
 msgid "Order Number in MercadoPago"
 msgstr "Número do pedido no MercadoPago"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:492
+#: includes/class-wc-kmercadopagogpl-basic.php:491
 msgid "Pay on MercadoPago"
 msgstr "Pague no MercadoPago"
 
@@ -469,19 +465,19 @@ msgstr "Pague no MercadoPago"
 msgid "Pay with MercadoPago"
 msgstr "Pague com MercadoPago"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:417
+#: includes/class-wc-kmercadopagogpl-manager.php:419
 msgid "Payer e-mail"
 msgstr "E-mail do pagador"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:409
+#: includes/class-wc-kmercadopagogpl-manager.php:415
 msgid "Payer Identification Number"
 msgstr "Número de identificação do pagador"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:407
+#: includes/class-wc-kmercadopagogpl-manager.php:414
 msgid "Payer Name"
 msgstr "Nome do pagador"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:419
+#: includes/class-wc-kmercadopagogpl-manager.php:420
 msgid "Payer phone"
 msgstr "Telefone do pagador"
 
@@ -489,9 +485,9 @@ msgstr "Telefone do pagador"
 msgid "Payment Methods"
 msgstr "Métodos de Pagamento"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:374
-#: includes/class-wc-kmercadopagogpl-manager.php:405
-#: includes/class-wc-kmercadopagogpl-manager.php:772
+#: includes/class-wc-kmercadopagogpl-manager.php:388
+#: includes/class-wc-kmercadopagogpl-manager.php:413
+#: includes/class-wc-kmercadopagogpl-manager.php:794
 msgid "Payment Number in MercadoPago"
 msgstr "Número de Pagamento no MercadoPago"
 
@@ -580,7 +576,7 @@ msgid "Subscription Mode (Only work with WooCommerce Subscription plugin)"
 msgstr ""
 "Modo de assinatura (funciona apenas com o plug-in de assinatura WooCommerce)"
 
-#: includes/class-wc-kmercadopagogpl-basic.php:491
+#: includes/class-wc-kmercadopagogpl-basic.php:490
 msgid ""
 "Thank you for your order, please click the button below to pay with "
 "MercadoPago."
@@ -588,7 +584,7 @@ msgstr ""
 "Obrigado pelo seu pedido, clique no botão abaixo para pagar com o "
 "MercadoPago."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:731
+#: includes/class-wc-kmercadopagogpl-manager.php:753
 #, php-format
 msgid ""
 "The currency \"%s\" is not supported. Please activate a conversion rate in "
@@ -600,7 +596,7 @@ msgstr ""
 "país): ARS, BRL, CLP, COP, MXN, UYU ou PEN."
 
 #. %s: PATH of Invalid Directory.
-#: includes/class-wc-kmercadopagogpl-manager.php:694
+#: includes/class-wc-kmercadopagogpl-manager.php:716
 #, php-format
 msgid ""
 "The directory /wp-content/plugins/wc-kmp-gpl/%s of MercadoPago Tools GPL "
@@ -609,14 +605,14 @@ msgstr ""
 "O diretório /wp-content/plugins/wc-kmp-gpl/%s do módulo GPL do MercadoPago "
 "Tools não é gravável, altere-o para chmod 777."
 
-#: includes/class-wc-kmercadopagogpl-basic.php:494
+#: includes/class-wc-kmercadopagogpl-basic.php:493
 msgid ""
 "There was a problem with MercadoPago, try again later or contact our team."
 msgstr ""
 "Ocorreu um problema com o MercadoPago, tente novamente mais tarde ou entre "
 "em contato com nossa equipe."
 
-#: includes/class-wc-kmercadopagogpl-manager.php:388
+#: includes/class-wc-kmercadopagogpl-manager.php:402
 msgid "This order was not processed by MercadoPago."
 msgstr "Este pedido não foi processado pelo MercadoPago."
 
@@ -660,6 +656,14 @@ msgstr "Para remover o ícone use este url"
 msgid "To review the MercadoPago Log, download the file: %s"
 msgstr "Para revisar o Log do MercadoPago, baixe o arquivo: %s"
 
+#. Name of the plugin
+msgid "Tools for MercadoPago and WooCommerce"
+msgstr "MercadoPago Tools GPL para WooCommerce"
+
+#. Description of the plugin
+msgid "Tools for MercadoPago and WooCommerce by Kijam"
+msgstr "MercadoPago Tools GPL para WooCommerce por Kijam"
+
 #: includes/data-mp-countries.php:102
 msgid "Uruguay"
 msgstr "Uruguai"
@@ -688,7 +692,7 @@ msgstr ""
 "Quando o pagamento for aprovado, o pedido no WooCommerce não estará em "
 "Processamento, mas em Concluído."
 
-#: class-wc-kmercadopagogpl.php:108
+#: class-wc-kmercadopagogpl.php:115
 msgid ""
 "WooCommerce MercadoPago Tools GPL depends on the last version of WooCommerce "
 "to work!"
@@ -696,7 +700,7 @@ msgstr ""
 "WooCommerce MercadoPago Tools GPL depende da última versão do WooCommerce "
 "para funcionar!"
 
-#: includes/class-wc-kmercadopagogpl-manager.php:675
-#: includes/class-wc-kmercadopagogpl-manager.php:684
+#: includes/class-wc-kmercadopagogpl-manager.php:697
+#: includes/class-wc-kmercadopagogpl-manager.php:706
 msgid "You must enter a valid Access Token."
 msgstr "Você deve inserir um token de acesso válido."
