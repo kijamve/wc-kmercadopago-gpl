@@ -168,4 +168,14 @@ return array(
 		'default'     => 'yes',
 		'description' => __( 'When the payment is approved, the client will be automatically redirected to your website.', 'woocommerce-kmercadopagogpl' ),
 	),
+	'method' => array(
+		'title'   => __( 'Checkout Method', 'woocommerce-kmercadopagogpl' ),
+		'type'    => 'select',
+		'label'   => __( 'Select the checkout method', 'woocommerce-kmercadopagogpl' ),
+		'default' => 'redirect',
+		'options' => array(
+			'redirect'    => __( 'Redirect to MercadoPago', 'woocommerce-kmercadopagogpl' ),
+			'modal' => __( 'Modal', 'woocommerce-kmercadopagogpl' ),
+		),
+	),
 );

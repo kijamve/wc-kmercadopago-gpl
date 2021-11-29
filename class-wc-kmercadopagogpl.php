@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: MercadoPago Tools GPL for WooCommerce
- * Plugin URI: https://kijam.com/
+ * Plugin URI: https://github.com/kijamve/woocommerce-kmercadopago-gpl
  * Description: MercadoPago Tools GPL for WooCommerce by Kijam
  * Author: Kijam López
  * Author URI: https://kijam.com/

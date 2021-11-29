@@ -67,7 +67,8 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$this->disable_debit_card                   = 'yes' === $this->get_option( 'disable_debit_card' );
 			$this->installment_paymentbutton_calculator = 'yes' === $this->get_option( 'installment_paymentbutton_calculator' );
 			$this->installment_product_calculator       = 'yes' === $this->get_option( 'installment_product_calculator' );
-			$this->method                               = 'redirect';
+			$this->mp_redirect                          = 'yes' === $this->get_option( 'mp_redirect' );
+			$this->method                               = $this->get_option( 'method', 'redirect' );
 			$this->mp_installments_msi_fee              = array();
 
 			add_action( 'wp_enqueue_scripts', array( $this, 'hook_js' ) );
@@ -485,13 +486,13 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$url = $this->get_mercadopago_url( $order );
 
 			if ( $url ) {
-				$html  = '<p>' . __( 'Thank you for your order, please click the button below to pay with MercadoPago.', 'woocommerce-kmercadopagogpl' ) . '</p>';
-				$html .= '<a id="submit-payment" href="' . $url . '" name="MP-Checkout" class="button alt" mp-mode="modal">' . __( 'Pay on MercadoPago', 'woocommerce-kmercadopagogpl' ) . '</a> <a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . __( 'Cancel order &amp; restore cart', 'woocommerce-kmercadopagogpl' ) . '</a>';
-				return $html;
+				echo '<script type="text/javascript" src="https://secure.mlstatic.com/mptools/render.js"></script>';
+				echo '<script type="text/javascript">(function() { $MPC.openCheckout({ url: "' . esc_url( $url ) . '", mode: "modal" }); })();</script>';
+				echo '<p>' . esc_html( __( 'Thank you for your order, please click the button below to pay with MercadoPago.', 'woocommerce-kmercadopagogpl' ) ) . '</p>';
+				echo '<a id="submit-payment" href="' . esc_url( $url ) . '" name="MP-Checkout" class="button alt" mp-mode="modal">' . esc_html( __( 'Pay on MercadoPago', 'woocommerce-kmercadopagogpl' ) ) . '</a> <a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Cancel order &amp; restore cart', 'woocommerce-kmercadopagogpl' ) ) . '</a>';
 			} else {
-				$html  = '<p>' . __( 'There was a problem with MercadoPago, try again later or contact our team.', 'woocommerce-kmercadopagogpl' ) . '</p>';
-				$html .= '<a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . __( 'Go to cart', 'woocommerce-kmercadopagogpl' ) . '</a>';
-				return $html;
+				echo '<p>' . esc_html( __( 'There was a problem with MercadoPago, try again later or contact our team.', 'woocommerce-kmercadopagogpl' ) ) . '</p>';
+				echo '<a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Go to cart', 'woocommerce-kmercadopagogpl' ) ) . '</a>';
 			}
 		}
 
