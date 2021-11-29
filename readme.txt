@@ -1,4 +1,4 @@
-=== MercadoPago Tools GPL for WooCommerce ===
+=== Tools for MercadoPago and WooCommerce ===
 Contributors: kijam
 Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
@@ -8,11 +8,11 @@ Stable tag: 1.0.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Offer to your clients the best experience in e-Commerce by using Mercado Pago as your payment method.
+Payment platform MercadoPago for Argentina, Mexico, Brazil, Colombia, Chile, Peru and Uruguay. Accepts Basic (Pro) checkout.
 
 == Description ==
 
-The Mercado Pago Pro GPL plugin allows you to process payments for your online store, allowing users to finalize their purchase with their preferred payment method.
+The Tools for MercadoPago and WooCommerce plugin allows you to process payments for your online store, accepts Credit Cards American Express, Mastercard, Visa, Debit Cards, ATM payments and more.
 
 == Installation ==
 
@@ -33,9 +33,9 @@ Automatic Installation by WordPress admin
 Done! It will be in the "Installed Plugins" section and from there you can activate it.
 
 Manual Installation
-1. Download the [zip] (https://github.com/kijamve/woocommerce-kmercadopago-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/woocommerce-kmercadopago-gpl/)
-2. Unzip the folder and rename it to ”woocommerce-kmercadopago-gpl”
-3. Copy the "woocommerce-kmercadopago-gpl" file into your WordPress directory, inside the "Plugins" folder.
+1. Download the [zip] (https://github.com/kijamve/wc-kmp-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/wc-kmp-gpl/)
+2. Unzip the folder and rename it to ”wc-kmp-gpl”
+3. Copy the "wc-kmp-gpl" file into your WordPress directory, inside the "Plugins" folder.
 
 Done!
 

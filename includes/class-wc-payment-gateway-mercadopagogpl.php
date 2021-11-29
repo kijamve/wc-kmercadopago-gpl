@@ -85,10 +85,7 @@ if ( ! class_exists( 'WC_Payment_Gateway_MercadoPagoGPL' ) ) :
 					<label for="<?php echo esc_attr( $field_key ); ?>"><?php echo wp_kses_post( $data['title'] ); ?></label>
 				</th>
 				<td class="forminp">
-					<?php
-					// phpcs:ignore
-					echo $data['description'];
-					?>
+					<?php echo wp_kses( $data['description'], wp_kses_allowed_html( 'post' ) ); ?>
 				</td>
 			</tr>
 			<?php

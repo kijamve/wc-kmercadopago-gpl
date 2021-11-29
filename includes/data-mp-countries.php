@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 return array(
 	'MLA' => array(
-		'NAME'                    => __( 'Argentina', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Argentina', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'ARS',
 		'CURRENCY_TYPE'           => 'FLOAT',
 		'ISO'                     => 'AR',
@@ -38,7 +38,7 @@ return array(
 		),
 	),
 	'MLM' => array(
-		'NAME'                    => __( 'Mexico', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Mexico', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'MXN',
 		'CURRENCY_TYPE'           => 'FLOAT',
 		'ISO'                     => 'MX',
@@ -57,7 +57,7 @@ return array(
 		),
 	),
 	'MLB' => array(
-		'NAME'                    => __( 'Brasil', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Brasil', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'BRL',
 		'CURRENCY_TYPE'           => 'FLOAT',
 		'ISO'                     => 'BR',
@@ -69,7 +69,7 @@ return array(
 		'ACCEPT_DIGITAL_CURRENCY' => false,
 	),
 	'MLC' => array(
-		'NAME'                    => __( 'Chile', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Chile', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'CLP',
 		'CURRENCY_TYPE'           => 'INTEGER',
 		'REGISTER_URL'            => 'https://www.mercadopago.com/mlc/registration',
@@ -79,7 +79,7 @@ return array(
 		'ACCEPT_DIGITAL_CURRENCY' => false,
 	),
 	'MCO' => array(
-		'NAME'                    => __( 'Colombia', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Colombia', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'COP',
 		'CURRENCY_TYPE'           => 'INTEGER',
 		'REGISTER_URL'            => 'https://www.mercadopago.com/mco/registration',
@@ -89,7 +89,7 @@ return array(
 		'ACCEPT_DIGITAL_CURRENCY' => false,
 	),
 	'MPE' => array(
-		'NAME'                    => __( 'Peru', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Peru', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'PEN',
 		'CURRENCY_TYPE'           => 'FLOAT',
 		'REGISTER_URL'            => 'https://registration.mercadopago.com.pe/registration-mp?mode=mp',
@@ -99,7 +99,7 @@ return array(
 		'ACCEPT_DIGITAL_CURRENCY' => false,
 	),
 	'MLU' => array(
-		'NAME'                    => __( 'Uruguay', 'woocommerce-kmercadopagogpl' ),
+		'NAME'                    => __( 'Uruguay', 'wc-kmp-gpl' ),
 		'CURRENCY'                => 'UYU',
 		'CURRENCY_TYPE'           => 'FLOAT',
 		'REGISTER_URL'            => 'https://registration.mercadopago.com.uy/registration-mp?mode=mp',

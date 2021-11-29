@@ -10,11 +10,11 @@
  * @since      1.0.0
  */
 
-if ( ! class_exists( 'MpMutexGPL' ) ) :
+if ( ! class_exists( 'WC_KMP_MpMutex' ) ) :
 	/**
 	 * Class to lock files
 	 */
-	class MpMutexGPL {
+	class WC_KMP_MpMutex {
 		/**
 		 * Resource of File to lock
 		 *

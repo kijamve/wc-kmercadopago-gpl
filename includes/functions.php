@@ -33,7 +33,7 @@ add_filter(
 			$options[ $type['id'] ] = $type['name'];
 		}
 		$fields['billing']['billing_kmercadopagogpl_vat_type'] = array(
-			'label'       => __( 'Identification type', 'woocommerce-kmercadopagogpl' ),
+			'label'       => __( 'Identification type', 'wc-kmp-gpl' ),
 			'type'        => 'select',
 			'required'    => true,
 			'options'     => $options,
@@ -42,7 +42,7 @@ add_filter(
 			'clear'       => true,
 		);
 		$fields['billing']['billing_kmercadopagogpl_vat']      = array(
-			'label'       => __( 'Identification number', 'woocommerce-kmercadopagogpl' ),
+			'label'       => __( 'Identification number', 'wc-kmp-gpl' ),
 			'type'        => 'text',
 			'required'    => true,
 			'class'       => apply_filters( 'kmercadopagogpl_form_row_last_field', array( 'form-row-wide', 'form-group', 'col-sm-12', 'col-md-12' ) ),
@@ -65,16 +65,16 @@ function kmercadopagogpl_metabox_cb() {
 add_action(
 	'add_meta_boxes',
 	function() {
-		add_meta_box( 'kmercadopagogpl-metabox', __( 'Data of MercadoPago', 'woocommerce-kmercadopagogpl' ), 'kmercadopagogpl_metabox_cb', 'shop_order', 'normal', 'high' );
+		add_meta_box( 'kmercadopagogpl-metabox', __( 'Data of MercadoPago', 'wc-kmp-gpl' ), 'kmercadopagogpl_metabox_cb', 'shop_order', 'normal', 'high' );
 	}
 );
-// phpcs:ignore
+// phpcs:ignore WordPress.Security.NonceVerification
 if ( isset( $_GET['topic'] ) || isset( $_GET['collection_id'] ) ) {
-	// phpcs:ignore
+	// phpcs:ignore WordPress.Security.NonceVerification
 	if ( isset( $_GET['collection_id'] ) ) {
 		$_GET['topic'] = 'payment';
-		// phpcs:ignore
-		$_GET['id']    = $_GET['collection_id'];
+		// phpcs:ignore WordPress.Security.NonceVerification
+		$_GET['id']    = (int) $_GET['collection_id'];
 	}
 	remove_filter( 'template_redirect', 'redirect_canonical' );
 }
@@ -84,7 +84,7 @@ add_action(
 		WC_KMercadoPagoGPL::get_instance();
 		WC_KMercadoPagoGPL_Manager::get_instance();
 		kmercadopagogpl_set_device_id_cb();
-		// phpcs:ignore
+		// phpcs:ignore WordPress.Security.NonceVerification
 		if ( isset( $_GET['topic'] ) && ! isset( $_GET['wc-api'] ) ) {
 			do_action( 'woocommerce_kmercadopagogpl_check_ipn_response' );
 		}
@@ -114,7 +114,7 @@ function do_kmercadopagogpl_hourly_check( $order_id ) {
 		$last_mp_status = WC_KMercadoPagoGPL_Manager::get_metadata( $order_id, 'last_mp_status' );
 		if ( 'pending' === $status || ! $last_mp_status || empty( $last_mp_status ) ) {
 			wp_clear_scheduled_hook( 'do_kmercadopagogpl_hourly_check', array( (int) $order_id ) );
-			$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'woocommerce-kmercadopagogpl' ) );
+			$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmp-gpl' ) );
 		} else {
 			$time = WC_KMercadoPagoGPL_Manager::get_metadata(
 				$order_id,
@@ -122,7 +122,7 @@ function do_kmercadopagogpl_hourly_check( $order_id ) {
 			);
 			if ( time() - $time > WC_KMercadoPagoGPL_Manager::get_instance()->get_cancel_hold_in() * 3600 ) {
 				wp_clear_scheduled_hook( 'do_kmercadopagogpl_hourly_check', array( (int) $order_id ) );
-				$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'woocommerce-kmercadopagogpl' ) );
+				$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmp-gpl' ) );
 			}
 		}
 	}
