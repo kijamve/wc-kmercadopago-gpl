@@ -4,7 +4,7 @@ Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,25 +23,25 @@ Por el momento, solo es posible usar el checkout basico (Version Pro), no incluy
 * SSL Certificate
 * Additional configuration: safe_mode off, memory_limit higher than 256MB
 
-Install the module in two different ways: automatically, from the “Plugins” section of WordPress, or manually, downloading and copying the plugin files into your directory.
+Install the module in two different ways: automatically, from the "**Plugins**" section of WordPress, or manually, downloading and copying the plugin files into your directory.
 
 Automatic Installation by WordPress admin
-1. Access "Plugins" from the navigation side menu of your WordPress administrator.
-2. Once inside Plugins, click on \'Add New\' and search for \'Mercado Pago payments for WooCommerce\' in the WordPress Plugin list
-3. Click on "Install."
+1. Access "**Plugins**" from the navigation side menu of your WordPress administrator.
+2. Once inside Plugins, click on "**Add New**" and search for "**Tools for MercadoPago and WooCommerce**" in the WordPress Plugin list
+3. Click on "**Install**"
 
 Done! It will be in the "Installed Plugins" section and from there you can activate it.
 
 Manual Installation
-1. Download the https://github.com/kijamve/wc-kmercadopago-gpl/releases now or from the o WordPress Module https://es.wordpress.org/plugins/wc-kmercadopago-gpl/
-2. Unzip the folder and rename it to "wc-kmercadopago-gpl"
-3. Copy the "wc-kmercadopago-gpl" file into your WordPress directory, inside the "Plugins" folder.
+1. Download the https://github.com/kijamve/wc-kmercadopago-gpl/releases now or from WordPress Module https://es.wordpress.org/plugins/wc-kmercadopago-gpl/
+2. Unzip the folder and **rename** it to "**wc-kmercadopago-gpl**"
+3. Copy the "**wc-kmercadopago-gpl**" file into your WordPress directory "**/wp-content/plugins/**".
 
 Done!
 
 = Installing this plugin does not affect the speed of your store! =
 
-If you installed it correctly, you will see it in your list of "Installed Plugins" on the WordPress work area. Please enable it and proceed to your Mercado Pago account integration and setup.
+If you installed it correctly, you will see it in your list of "**Installed Plugins**" on the WordPress work area. Please proceed to activate it and then configure the Access token of your MercadoPago account.
 
 =  Configuration =
 Set up both the plugin and the checkouts you want to activate on your payment avenue. Follow these five steps instructions and get everything ready to receive payments:
