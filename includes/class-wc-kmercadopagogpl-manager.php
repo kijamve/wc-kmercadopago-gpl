@@ -184,6 +184,11 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				if ( 'testing' !== $t3 ) {
 					add_action( 'admin_notices', array( $this, 'directory_logs_nowrite' ) );
 				}
+				// phpcs:ignore WordPress.Security.NonceVerification
+				if ( current_user_can( 'manage_options' ) && isset( $_POST['woocommerce_kmercadopagogpl-manager_token'] ) ) {
+					// phpcs:ignore WordPress.Security.NonceVerification
+					self::$token = esc_html( $_POST['woocommerce_kmercadopagogpl-manager_token'] );
+				}
 				if ( empty( self::$token ) ) {
 					add_action( 'admin_notices', array( $this, 'client_secret_missing_message' ) );
 				}

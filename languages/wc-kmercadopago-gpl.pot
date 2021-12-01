@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Tools for MercadoPago and WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-29 23:02+0000\n"
+"POT-Creation-Date: 2021-12-01 02:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Amount Paid"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:1451
+#: includes/class-wc-kmercadopagogpl-manager.php:1451 
 #: includes/data-settings-mercadopagogpl-manager.php:21
 msgid "aquí"
 msgstr ""
@@ -85,11 +85,11 @@ msgstr ""
 msgid "Brasil"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:592
+#: includes/class-wc-kmercadopagogpl-basic.php:564
 msgid "Calculate"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:491
+#: includes/class-wc-kmercadopagogpl-basic.php:489
 msgid "Cancel order &amp; restore cart"
 msgstr ""
 
@@ -101,7 +101,7 @@ msgstr ""
 msgid "Chile"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:697
+#: includes/class-wc-kmercadopagogpl-manager.php:697 
 #: includes/class-wc-kmercadopagogpl-manager.php:706
 msgid "Click here to configure it!"
 msgstr ""
@@ -214,7 +214,7 @@ msgstr ""
 msgid "Enable"
 msgstr ""
 
-#: includes/data-settings-mercadopagogpl-basic.php:18
+#: includes/data-settings-mercadopagogpl-basic.php:18 
 #: includes/data-settings-mercadopagogpl-manager.php:45
 msgid "Enable / Disable"
 msgstr ""
@@ -243,7 +243,7 @@ msgstr ""
 msgid "Enter MercadoPago Public Key."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:588
+#: includes/class-wc-kmercadopagogpl-basic.php:560
 msgid "Enter the first six digits of your credit card to calculate the fees:"
 msgstr ""
 
@@ -251,12 +251,12 @@ msgstr ""
 msgid "Enter the percentage of commission you want to charge your clients."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:531
+#: includes/functions.php:184
 msgid "Error on MercadoPago"
 msgstr ""
 
 #. %s: Fee Amount.
-#: includes/class-wc-kmercadopagogpl-basic.php:368
+#: includes/class-wc-kmercadopagogpl-basic.php:366
 #, php-format
 msgid "Fee: %s"
 msgstr ""
@@ -267,7 +267,7 @@ msgstr ""
 msgid "Fixed amount of Commission in %s"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:494
+#: includes/class-wc-kmercadopagogpl-basic.php:492
 msgid "Go to cart"
 msgstr ""
 
@@ -295,15 +295,15 @@ msgstr ""
 msgid "Indicate the maximum number of quotas available to your clients"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:532
+#: includes/functions.php:185
 msgid "Internal server error"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:530
+#: includes/functions.php:183
 msgid "Invalid Credit Card Number"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:534
+#: includes/functions.php:187
 msgid "Invalid setting"
 msgstr ""
 
@@ -323,11 +323,11 @@ msgstr ""
 msgid "Leave unpaid orders in \"on-hold\" status"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:533
+#: includes/functions.php:186
 msgid "Loading..."
 msgstr ""
 
-#: includes/data-settings-mercadopagogpl-manager.php:54
+#: includes/data-settings-mercadopagogpl-manager.php:54 
 #: includes/data-settings-mercadopagogpl-manager.php:61
 #, php-format
 msgid "Look for this information in your MercadoPago account to %s."
@@ -341,14 +341,14 @@ msgstr ""
 msgid "Maximum number of installments"
 msgstr ""
 
-#: includes/data-settings-mercadopagogpl-basic.php:27
+#: includes/data-settings-mercadopagogpl-basic.php:27 
 #: includes/class-wc-kmercadopagogpl-basic.php:43
 msgid "MercadoPago"
 msgstr ""
 
 #. %s: ISO of invalid Corrency.
-#: includes/class-wc-kmercadopagogpl-manager.php:697
-#: includes/class-wc-kmercadopagogpl-manager.php:706
+#: includes/class-wc-kmercadopagogpl-manager.php:697 
+#: includes/class-wc-kmercadopagogpl-manager.php:706 
 #: includes/class-wc-kmercadopagogpl-manager.php:753
 msgid "MercadoPago Disable"
 msgstr ""
@@ -365,7 +365,7 @@ msgstr ""
 msgid "MercadoPago: A dispute has started."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:886
+#: includes/class-wc-kmercadopagogpl-manager.php:886 
 #: includes/class-wc-kmercadopagogpl-manager.php:890
 msgid "MercadoPago: Payment approved."
 msgstr ""
@@ -394,11 +394,11 @@ msgstr ""
 msgid "MercadoPago: The payment was returned to the customer."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:550
+#: includes/class-wc-kmercadopagogpl-basic.php:522
 msgid "MercadoPago: Wait payment."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:481
+#: includes/class-wc-kmercadopagogpl-basic.php:479
 msgid "MercadoPago: Wait payment..."
 msgstr ""
 
@@ -418,37 +418,37 @@ msgstr ""
 msgid "Name printed on Credit / Debit Card"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:1175
+#: includes/class-wc-kmercadopagogpl-manager.php:1175 
 #: includes/class-wc-kmercadopagogpl-manager.php:1196
 msgid "Not Available"
 msgstr ""
 
-#: includes/data-settings-mercadopagogpl-basic.php:70
-#: includes/data-settings-mercadopagogpl-basic.php:77
-#: includes/data-settings-mercadopagogpl-basic.php:90
-#: includes/data-settings-mercadopagogpl-basic.php:97
-#: includes/data-settings-mercadopagogpl-basic.php:104
-#: includes/data-settings-mercadopagogpl-basic.php:111
-#: includes/data-settings-mercadopagogpl-basic.php:118
-#: includes/data-settings-mercadopagogpl-basic.php:125
-#: includes/data-settings-mercadopagogpl-manager.php:40
+#: includes/data-settings-mercadopagogpl-basic.php:70 
+#: includes/data-settings-mercadopagogpl-basic.php:77 
+#: includes/data-settings-mercadopagogpl-basic.php:90 
+#: includes/data-settings-mercadopagogpl-basic.php:97 
+#: includes/data-settings-mercadopagogpl-basic.php:104 
+#: includes/data-settings-mercadopagogpl-basic.php:111 
+#: includes/data-settings-mercadopagogpl-basic.php:118 
+#: includes/data-settings-mercadopagogpl-basic.php:125 
+#: includes/data-settings-mercadopagogpl-manager.php:40 
 #: includes/data-settings-mercadopagogpl-manager.php:41
 msgid "Only available in MercadoPago Tools Pro"
 msgstr ""
 
 #. %s: order ID.
-#: includes/class-wc-kmercadopagogpl-basic.php:365
+#: includes/class-wc-kmercadopagogpl-basic.php:363
 #, php-format
 msgid "Order %s"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:394
-#: includes/class-wc-kmercadopagogpl-manager.php:412
+#: includes/class-wc-kmercadopagogpl-manager.php:394 
+#: includes/class-wc-kmercadopagogpl-manager.php:412 
 #: includes/class-wc-kmercadopagogpl-manager.php:806
 msgid "Order Number in MercadoPago"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:491
+#: includes/class-wc-kmercadopagogpl-basic.php:489
 msgid "Pay on MercadoPago"
 msgstr ""
 
@@ -476,8 +476,8 @@ msgstr ""
 msgid "Payment Methods"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:388
-#: includes/class-wc-kmercadopagogpl-manager.php:413
+#: includes/class-wc-kmercadopagogpl-manager.php:388 
+#: includes/class-wc-kmercadopagogpl-manager.php:413 
 #: includes/class-wc-kmercadopagogpl-manager.php:794
 msgid "Payment Number in MercadoPago"
 msgstr ""
@@ -560,7 +560,7 @@ msgstr ""
 msgid "Subscription Mode (Only work with WooCommerce Subscription plugin)"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:490
+#: includes/class-wc-kmercadopagogpl-basic.php:488
 msgid ""
 "Thank you for your order, please click the button below to pay with "
 "MercadoPago."
@@ -578,11 +578,11 @@ msgstr ""
 #: includes/class-wc-kmercadopagogpl-manager.php:716
 #, php-format
 msgid ""
-"The directory /wp-content/plugins/wc-kmercadopago-gpl/%s of MercadoPago Tools GPL "
-"module is not writable, change it to chmod 777."
+"The directory /wp-content/plugins/wc-kmercadopago-gpl/%s of MercadoPago "
+"Tools GPL module is not writable, change it to chmod 777."
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-basic.php:493
+#: includes/class-wc-kmercadopagogpl-basic.php:491
 msgid ""
 "There was a problem with MercadoPago, try again later or contact our team."
 msgstr ""
@@ -592,19 +592,19 @@ msgid "This order was not processed by MercadoPago."
 msgstr ""
 
 #. %1$s%: % of fee amount, %2$s%: Fixed fee amount.
-#: includes/class-wc-kmercadopagogpl-basic.php:85
+#: includes/class-wc-kmercadopagogpl-basic.php:83
 #, php-format
 msgid "This payment method has a <b>%1$s%% + %2$s of fee</b>."
 msgstr ""
 
 #. %2$s%: fee amount.
-#: includes/class-wc-kmercadopagogpl-basic.php:91
+#: includes/class-wc-kmercadopagogpl-basic.php:89
 #, php-format
 msgid "This payment method has a <b>%s of fee</b>."
 msgstr ""
 
 #. %1$s%: % of fee amount.
-#: includes/class-wc-kmercadopagogpl-basic.php:88
+#: includes/class-wc-kmercadopagogpl-basic.php:86
 #, php-format
 msgid "This payment method has a <b>%s% of fee</b>."
 msgstr ""
@@ -669,7 +669,7 @@ msgid ""
 "to work!"
 msgstr ""
 
-#: includes/class-wc-kmercadopagogpl-manager.php:697
+#: includes/class-wc-kmercadopagogpl-manager.php:697 
 #: includes/class-wc-kmercadopagogpl-manager.php:706
 msgid "You must enter a valid Access Token."
 msgstr ""

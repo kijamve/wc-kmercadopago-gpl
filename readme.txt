@@ -8,10 +8,12 @@ Stable tag: 1.0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Payment platform MercadoPago for Argentina, Mexico, Brazil, Colombia, Chile, Peru and Uruguay. Accepts Basic (Pro) checkout.
+Plataforma de pago MercadoPago para Argentina, Mexico, Brazil, Colombia, Chile, Peru and Uruguay. Solo Checkout Basico (Pro).
 
 == Description ==
-The Tools for MercadoPago and WooCommerce plugin allows you to process payments for your online store, accepts Credit Cards American Express, Mastercard, Visa, Debit Cards, ATM payments and more.
+El plugin Tools for MercadoPago and WooCommerce le permite procesar pagos para su tienda en línea, acepta tarjetas de crédito American Express, Mastercard, Visa, tarjetas de débito, pagos en cajeros automáticos, kioscos y más.
+
+Por el momento, solo es posible usar el checkout basico (Version Pro), no incluye checkout personalizado o custom checkout.
 
 == Installation ==
 = Minimum Technical Requirements =
@@ -51,16 +53,19 @@ Set up both the plugin and the checkouts you want to activate on your payment av
 5. Access **advanced** plugin and checkout **settings** only when you want to change the default settings.
 
 == Screenshots ==
-1. Setting page 1
-2. Setting page 2
-3. Setting page 3
-4. Setting page 4
-5. Setting page 5
-6. Product Sheet
-7. Checkout Page
-8. Checkout Page on MercadoPago
-9. Order Details
+1. Configuración del plugin 1
+2. Configuración del plugin 2
+3. Configuración del plugin 3
+4. Configuración del plugin 4
+5. Configuración del plugin 5
+6. Ficha de producto
+7. Página de pago
+8. Página de pago en MercadoPago
+9. Detalles del pedido
 
 == Changelog ==
+= v1.0.3 (30/11/2021) =
+- Fix invalid error message setting access token
+- Minor fix on translation
 = v1.0.2 (30/11/2021) =
-Initial Version
+- Initial Version
