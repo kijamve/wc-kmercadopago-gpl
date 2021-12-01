@@ -53,5 +53,5 @@ Set up both the plugin and the checkouts you want to activate on your payment av
 5. Access **advanced** plugin and checkout **settings** only when you want to change the default settings.
 
 == Changelog ==
-= v1.0.0 (28/11/2021) =
+= v1.0.2 (30/11/2021) =
 Initial Version
