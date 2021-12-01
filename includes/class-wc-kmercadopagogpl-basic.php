@@ -71,8 +71,6 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$this->method                               = $this->get_option( 'method', 'redirect' );
 			$this->mp_installments_msi_fee              = array();
 
-			add_action( 'wp_enqueue_scripts', array( $this, 'hook_js' ) );
-
 			add_action( 'woocommerce_customer_changed_subscription_to_cancelled', array( $this, 'status_refunded' ), 10, 1 );
 			add_action( 'woocommerce_order_status_refunded', array( $this, 'status_refunded' ), 10, 1 );
 			add_action( 'woocommerce_order_status_cancelled', array( $this, 'status_refunded' ), 10, 1 );

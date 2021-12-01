@@ -11,11 +11,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Payment platform MercadoPago for Argentina, Mexico, Brazil, Colombia, Chile, Peru and Uruguay. Accepts Basic (Pro) checkout.
 
 == Description ==
-
 The Tools for MercadoPago and WooCommerce plugin allows you to process payments for your online store, accepts Credit Cards American Express, Mastercard, Visa, Debit Cards, ATM payments and more.
 
 == Installation ==
-
 = Minimum Technical Requirements =
 * WordPress
 * WooCommerce
@@ -27,14 +25,14 @@ Install the module in two different ways: automatically, from the “Plugins” 
 
 Automatic Installation by WordPress admin
 1. Access "Plugins" from the navigation side menu of your WordPress administrator.
-2. Once inside Plugins, click on 'Add New' and search for 'Mercado Pago payments for WooCommerce' in the WordPress Plugin list
+2. Once inside Plugins, click on \'Add New\' and search for \'Mercado Pago payments for WooCommerce\' in the WordPress Plugin list
 3. Click on "Install."
 
 Done! It will be in the "Installed Plugins" section and from there you can activate it.
 
 Manual Installation
-1. Download the [zip] (https://github.com/kijamve/wc-kmercadopago-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/wc-kmercadopago-gpl/)
-2. Unzip the folder and rename it to ”wc-kmercadopago-gpl”
+1. Download the https://github.com/kijamve/wc-kmercadopago-gpl/releases now or from the o WordPress Module https://es.wordpress.org/plugins/wc-kmercadopago-gpl/
+2. Unzip the folder and rename it to "wc-kmercadopago-gpl"
 3. Copy the "wc-kmercadopago-gpl" file into your WordPress directory, inside the "Plugins" folder.
 
 Done!
@@ -51,6 +49,17 @@ Set up both the plugin and the checkouts you want to activate on your payment av
 3. Fill in the basic information of your business in the plugin configuration.
 4. Set up **payment preferences** for your customers.
 5. Access **advanced** plugin and checkout **settings** only when you want to change the default settings.
+
+== Screenshots ==
+1. Setting page 1
+2. Setting page 2
+3. Setting page 3
+4. Setting page 4
+5. Setting page 5
+6. Product Sheet
+7. Checkout Page
+8. Checkout Page on MercadoPago
+9. Order Details
 
 == Changelog ==
 = v1.0.2 (30/11/2021) =
