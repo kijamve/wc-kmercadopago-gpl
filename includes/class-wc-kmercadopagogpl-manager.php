@@ -390,15 +390,8 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			}
 			$data = $this->validate_mercadopago( 'payment', self::get_metadata( $order_id, 'mp_op_id' ), $order_id );
 			if ( ! $data ) {
-				$data = $this->validate_mercadopago( 'payment', self::get_metadata( $order_id, __( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ) ), $order_id );
-			}
-			if ( ! $data ) {
 				$data = $this->validate_mercadopago( 'merchant_order', self::get_metadata( $order_id, 'mp_order_id' ), $order_id );
 			}
-			if ( ! $data ) {
-				$data = $this->validate_mercadopago( 'merchant_order', self::get_metadata( $order_id, __( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ) ), $order_id );
-			}
-
 			if ( $data ) {
 				$this->successful_request( $data, false );
 			}
@@ -414,8 +407,8 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			self::showLabelMetabox( $order_id, 'Amount Paid', __( 'Amount Paid', 'wc-kmercadopago-gpl' ), true );
 			self::showLabelMetabox( $order_id, 'Amount of Shipping', __( 'Amount of Shipping', 'wc-kmercadopago-gpl' ), true );
 			self::showLabelMetabox( $order_id, 'Amount of Fee', __( 'Amount of Fee', 'wc-kmercadopago-gpl' ), true );
-			self::showLabelMetabox( $order_id, 'Order Number in MercadoPago', __( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payment Number in MercadoPago', __( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'mp_order_id', __( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'mp_op_id', __( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
 			self::showLabelMetabox( $order_id, 'Payer Name', __( 'Payer Name', 'wc-kmercadopago-gpl' ) );
 			self::showLabelMetabox( $order_id, 'Payer Identification Number', __( 'Payer Identification Number', 'wc-kmercadopago-gpl' ) );
 			self::showLabelMetabox( $order_id, 'Method of payment', __( 'Method of payment', 'wc-kmercadopago-gpl' ) );
@@ -796,7 +789,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 					if ( ! empty( $posted['mp_op_id'] ) ) {
 						self::set_metadata(
 							$order_id,
-							__( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ),
+							'Payment Number in MercadoPago',
 							$posted['mp_op_id']
 						);
 						self::set_metadata(
@@ -808,7 +801,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 					if ( ! empty( $posted['mp_order_id'] ) ) {
 						self::set_metadata(
 							$order_id,
-							__( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ),
+							'Order Number in MercadoPago',
 							$posted['mp_order_id']
 						);
 						self::set_metadata(
