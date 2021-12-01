@@ -74,7 +74,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		public function __construct() {
 			$this->id           = 'kmercadopagogpl-manager';
 			$this->has_fields   = false;
-			$this->method_title = __( 'MercadoPago Tools GPL', 'wc-kmp-gpl' );
+			$this->method_title = __( 'MercadoPago Tools GPL', 'wc-kmercadopago-gpl' );
 
 			self::check_database();
 
@@ -378,20 +378,20 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				?>
 				<table width="70%" style="width:70%">
 					<tr>
-						<td><strong><?php echo esc_html( __( 'DNI', 'wc-kmp-gpl' ) ); ?>:</strong></td><td><?php echo esc_html( $vat_type . ' ' . $vat ); ?></td>
+						<td><strong><?php echo esc_html( __( 'DNI', 'wc-kmercadopago-gpl' ) ); ?>:</strong></td><td><?php echo esc_html( $vat_type . ' ' . $vat ); ?></td>
 					<tr>
 				</table>
 				<?php
 			}
 			$data = $this->validate_mercadopago( 'payment', self::get_metadata( $order_id, 'mp_op_id' ), $order_id );
 			if ( ! $data ) {
-				$data = $this->validate_mercadopago( 'payment', self::get_metadata( $order_id, __( 'Payment Number in MercadoPago', 'wc-kmp-gpl' ) ), $order_id );
+				$data = $this->validate_mercadopago( 'payment', self::get_metadata( $order_id, __( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ) ), $order_id );
 			}
 			if ( ! $data ) {
 				$data = $this->validate_mercadopago( 'merchant_order', self::get_metadata( $order_id, 'mp_order_id' ), $order_id );
 			}
 			if ( ! $data ) {
-				$data = $this->validate_mercadopago( 'merchant_order', self::get_metadata( $order_id, __( 'Order Number in MercadoPago', 'wc-kmp-gpl' ) ), $order_id );
+				$data = $this->validate_mercadopago( 'merchant_order', self::get_metadata( $order_id, __( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ) ), $order_id );
 			}
 
 			if ( $data ) {
@@ -399,25 +399,25 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			}
 			$status = self::get_metadata( $order_id, 'last_mp_status' );
 			if ( ! $status || empty( $status ) ) {
-				echo esc_html( __( 'This order was not processed by MercadoPago.', 'wc-kmp-gpl' ) );
+				echo esc_html( __( 'This order was not processed by MercadoPago.', 'wc-kmercadopago-gpl' ) );
 				return;
 			}
 			?>
 			<table width="70%" style="width:70%">
 			<?php
-			self::showLabelMetabox( $order_id, 'last_mp_status', __( 'Actual Status', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Amount Paid', __( 'Amount Paid', 'wc-kmp-gpl' ), true );
-			self::showLabelMetabox( $order_id, 'Amount of Shipping', __( 'Amount of Shipping', 'wc-kmp-gpl' ), true );
-			self::showLabelMetabox( $order_id, 'Amount of Fee', __( 'Amount of Fee', 'wc-kmp-gpl' ), true );
-			self::showLabelMetabox( $order_id, 'Order Number in MercadoPago', __( 'Order Number in MercadoPago', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payment Number in MercadoPago', __( 'Payment Number in MercadoPago', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payer Name', __( 'Payer Name', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payer Identification Number', __( 'Payer Identification Number', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Method of payment', __( 'Method of payment', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Credit / Debit Card', __( 'Credit / Debit Card', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Name printed on Credit / Debit Card', __( 'Name printed on Credit / Debit Card', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payer e-mail', __( 'Payer e-mail', 'wc-kmp-gpl' ) );
-			self::showLabelMetabox( $order_id, 'Payer phone', __( 'Payer phone', 'wc-kmp-gpl' ) );
+			self::showLabelMetabox( $order_id, 'last_mp_status', __( 'Actual Status', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Amount Paid', __( 'Amount Paid', 'wc-kmercadopago-gpl' ), true );
+			self::showLabelMetabox( $order_id, 'Amount of Shipping', __( 'Amount of Shipping', 'wc-kmercadopago-gpl' ), true );
+			self::showLabelMetabox( $order_id, 'Amount of Fee', __( 'Amount of Fee', 'wc-kmercadopago-gpl' ), true );
+			self::showLabelMetabox( $order_id, 'Order Number in MercadoPago', __( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Payment Number in MercadoPago', __( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Payer Name', __( 'Payer Name', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Payer Identification Number', __( 'Payer Identification Number', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Method of payment', __( 'Method of payment', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Credit / Debit Card', __( 'Credit / Debit Card', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Name printed on Credit / Debit Card', __( 'Name printed on Credit / Debit Card', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Payer e-mail', __( 'Payer e-mail', 'wc-kmercadopago-gpl' ) );
+			self::showLabelMetabox( $order_id, 'Payer phone', __( 'Payer phone', 'wc-kmercadopago-gpl' ) );
 			?>
 			</table>
 			<?php
@@ -694,7 +694,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		 * @return void
 		 */
 		public function client_secret_invalid_message() {
-			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmp-gpl' ) ) . '</strong>: ' . esc_html( __( 'You must enter a valid Access Token.', 'wc-kmp-gpl' ) ) . ' <a href="' . esc_url( $this->admin_url() ) . '">' . esc_html( __( 'Click here to configure it!', 'wc-kmp-gpl' ) ) . '</a></p></div>';
+			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmercadopago-gpl' ) ) . '</strong>: ' . esc_html( __( 'You must enter a valid Access Token.', 'wc-kmercadopago-gpl' ) ) . ' <a href="' . esc_url( $this->admin_url() ) . '">' . esc_html( __( 'Click here to configure it!', 'wc-kmercadopago-gpl' ) ) . '</a></p></div>';
 		}
 
 		/**
@@ -703,7 +703,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		 * @return void
 		 */
 		public function client_secret_missing_message() {
-			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmp-gpl' ) ) . '</strong>: ' . esc_html( __( 'You must enter a valid Access Token.', 'wc-kmp-gpl' ) ) . ' <a href="' . esc_url( $this->admin_url() ) . '">' . esc_html( __( 'Click here to configure it!', 'wc-kmp-gpl' ) ) . '</a></p></div>';
+			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmercadopago-gpl' ) ) . '</strong>: ' . esc_html( __( 'You must enter a valid Access Token.', 'wc-kmercadopago-gpl' ) ) . ' <a href="' . esc_url( $this->admin_url() ) . '">' . esc_html( __( 'Click here to configure it!', 'wc-kmercadopago-gpl' ) ) . '</a></p></div>';
 		}
 		/**
 		 * Display directory error to write
@@ -713,7 +713,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		 */
 		public function directory_nowrite( $name ) {
 			// translators: %s: PATH of Invalid Directory.
-			echo '<div class="error"><p><strong>' . esc_html( sprintf( __( 'The directory /wp-content/plugins/wc-kmp-gpl/%s of MercadoPago Tools GPL module is not writable, change it to chmod 777.', 'wc-kmp-gpl' ), $name ) ) . '</strong></p></div>';
+			echo '<div class="error"><p><strong>' . esc_html( sprintf( __( 'The directory /wp-content/plugins/wc-kmercadopago-gpl/%s of MercadoPago Tools GPL module is not writable, change it to chmod 777.', 'wc-kmercadopago-gpl' ), $name ) ) . '</strong></p></div>';
 		}
 
 		/**
@@ -750,7 +750,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 		 */
 		public function currency_not_supported_message() {
 			// translators: %s: ISO of invalid Corrency.
-			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmp-gpl' ) ) . '</strong>: ' . esc_html( sprintf( __( 'The currency "%s" is not supported. Please activate a conversion rate in the module configuration or use one of the following currencies (depending on your country): ARS, BRL, CLP, COP, MXN, UYU or PEN.', 'wc-kmp-gpl' ), get_woocommerce_currency() ) ) . '</p></div>';
+			echo '<div class="error"><p><strong>' . esc_html( __( 'MercadoPago Disable', 'wc-kmercadopago-gpl' ) ) . '</strong>: ' . esc_html( sprintf( __( 'The currency "%s" is not supported. Please activate a conversion rate in the module configuration or use one of the following currencies (depending on your country): ARS, BRL, CLP, COP, MXN, UYU or PEN.', 'wc-kmercadopago-gpl' ), get_woocommerce_currency() ) ) . '</p></div>';
 		}
 
 		/**
@@ -791,7 +791,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 					if ( ! empty( $posted['mp_op_id'] ) ) {
 						self::set_metadata(
 							$order_id,
-							__( 'Payment Number in MercadoPago', 'wc-kmp-gpl' ),
+							__( 'Payment Number in MercadoPago', 'wc-kmercadopago-gpl' ),
 							$posted['mp_op_id']
 						);
 						self::set_metadata(
@@ -803,7 +803,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 					if ( ! empty( $posted['mp_order_id'] ) ) {
 						self::set_metadata(
 							$order_id,
-							__( 'Order Number in MercadoPago', 'wc-kmp-gpl' ),
+							__( 'Order Number in MercadoPago', 'wc-kmercadopago-gpl' ),
 							$posted['mp_order_id']
 						);
 						self::set_metadata(
@@ -883,11 +883,11 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 								);
 							}
 
-							$order->add_order_note( __( 'MercadoPago: Payment approved.', 'wc-kmp-gpl' ) );
+							$order->add_order_note( __( 'MercadoPago: Payment approved.', 'wc-kmercadopago-gpl' ) );
 							$order->payment_complete();
 							if ( $this->mp_completed ) {
 								self::debug( 'Estado mp_completed' );
-								$order->update_status( 'completed', __( 'MercadoPago: Payment approved.', 'wc-kmp-gpl' ) );
+								$order->update_status( 'completed', __( 'MercadoPago: Payment approved.', 'wc-kmercadopago-gpl' ) );
 							} else {
 								self::debug( 'Estado not mp_completed' );
 							}
@@ -895,24 +895,24 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 						case 'pending':
 						case 'in_process':
 							if ( ! empty( $posted['mp_op_id'] ) ) {
-								$order->update_status( 'on-hold', __( 'MercadoPago: The payment is in review.', 'wc-kmp-gpl' ) );
+								$order->update_status( 'on-hold', __( 'MercadoPago: The payment is in review.', 'wc-kmercadopago-gpl' ) );
 							}
 							break;
 						case 'rejected':
-							$order->add_order_note( __( 'MercadoPago: payment rejected, user must try again.', 'wc-kmp-gpl' ) );
-							$order->update_status( 'failed', __( 'MercadoPago: Payment rejected.', 'wc-kmp-gpl' ) );
+							$order->add_order_note( __( 'MercadoPago: payment rejected, user must try again.', 'wc-kmercadopago-gpl' ) );
+							$order->update_status( 'failed', __( 'MercadoPago: Payment rejected.', 'wc-kmercadopago-gpl' ) );
 							break;
 						case 'refunded':
-							$order->update_status( 'refunded', __( 'MercadoPago: The payment was returned to the customer.', 'wc-kmp-gpl' ) );
+							$order->update_status( 'refunded', __( 'MercadoPago: The payment was returned to the customer.', 'wc-kmercadopago-gpl' ) );
 							do_action( 'woocommerce_order_fully_refunded_notification', $order->get_id() );
 							break;
 						case 'hacking':
 						case 'cancelled':
-							$order->update_status( 'cancelled', __( 'MercadoPago: The payment was cancelled.', 'wc-kmp-gpl' ) );
+							$order->update_status( 'cancelled', __( 'MercadoPago: The payment was cancelled.', 'wc-kmercadopago-gpl' ) );
 							break;
 						case 'in_mediation':
-							$order->add_order_note( __( 'MercadoPago: A dispute has started over the payment.', 'wc-kmp-gpl' ) );
-							$order->update_status( 'on-hold', __( 'MercadoPago: A dispute has started.', 'wc-kmp-gpl' ) );
+							$order->add_order_note( __( 'MercadoPago: A dispute has started over the payment.', 'wc-kmercadopago-gpl' ) );
+							$order->update_status( 'on-hold', __( 'MercadoPago: A dispute has started.', 'wc-kmercadopago-gpl' ) );
 							break;
 					}
 				}
@@ -1172,7 +1172,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 									$ret['identification'] .= ' - ' . $payment['card']['cardholder']['identification']['type'];
 									$ret['identification'] .= ' ' . $payment['card']['cardholder']['identification']['number'];
 								} else {
-									$ret['identification'] .= ' - ' . __( 'Not Available', 'wc-kmp-gpl' );
+									$ret['identification'] .= ' - ' . __( 'Not Available', 'wc-kmercadopago-gpl' );
 								}
 							}
 						}
@@ -1193,7 +1193,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 						if ( isset( $payment_info['payer'] ) && isset( $payment_info['payer']['first_name'] ) ) {
 							$ret['client_name'] .= ' - ' . trim( $payment['payer']['first_name'] . ' ' . $payment['payer']['last_name'] );
 						} else {
-							$ret['client_name'] .= ' - ' . __( 'Not Available', 'wc-kmp-gpl' );
+							$ret['client_name'] .= ' - ' . __( 'Not Available', 'wc-kmercadopago-gpl' );
 						}
 					}
 					if ( 'pending' === $payment['status'] || 'in_process' === $payment['status'] ) {
@@ -1448,7 +1448,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			$panel_mp          = sprintf(
 				'<a href="%s" target="_blank">%s</a>',
 				'https://www.mercadopago.com/developers/panel/',
-				__( 'aquí', 'wc-kmp-gpl' )
+				__( 'aquí', 'wc-kmercadopago-gpl' )
 			);
 			if ( ! isset( $this->setting['PUBLICKEY_URL'] ) ) {
 				$this->setting['PUBLICKEY_URL'] = '';

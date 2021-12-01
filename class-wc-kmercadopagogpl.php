@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Tools for MercadoPago and WooCommerce
- * Plugin URI: https://github.com/kijamve/wc-kmp-gpl
+ * Plugin URI: https://github.com/kijamve/wc-kmercadopago-gpl
  * Description: Tools for MercadoPago and WooCommerce by Kijam
  * Author: Kijam López
  * Author URI: https://kijam.com/
- * Version: 1.0.1
+ * Version: 1.0.2
  * License: GPLv2
- * Text Domain: wc-kmp-gpl
+ * Text Domain: wc-kmercadopago-gpl
  * Domain Path: /languages/
  *
  * @author    Kijam.com <info@kijam.com>
@@ -31,7 +31,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL' ) ) :
 		*
 		* @var string
 		*/
-		const VERSION = '1.0.1';
+		const VERSION = '1.0.2';
 
 		/**
 		* Plugin Path.
@@ -112,7 +112,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL' ) ) :
 		 * @return  void
 		 */
 		public function woocommerce_missing_notice() {
-			echo '<div class="error"><p>' . esc_html( __( 'WooCommerce MercadoPago Tools GPL depends on the last version of WooCommerce to work!', 'wc-kmp-gpl' ) ) . '</p></div>';
+			echo '<div class="error"><p>' . esc_html( __( 'WooCommerce MercadoPago Tools GPL depends on the last version of WooCommerce to work!', 'wc-kmercadopago-gpl' ) ) . '</p></div>';
 		}
 
 		/**
@@ -175,9 +175,9 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL' ) ) :
 	}
 	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'kmercadopagogpl_add_action_links' );
 
-	$mp_gpl_locale = apply_filters( 'plugin_locale', get_locale(), 'wc-kmp-gpl' );
-	load_textdomain( 'wc-kmp-gpl', trailingslashit( WP_LANG_DIR ) . 'wc-kmp-gpl/wc-kmp-gpl-' . $mp_gpl_locale . '.mo' );
-	load_plugin_textdomain( 'wc-kmp-gpl', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	$mp_gpl_locale = apply_filters( 'plugin_locale', get_locale(), 'wc-kmercadopago-gpl' );
+	load_textdomain( 'wc-kmercadopago-gpl', trailingslashit( WP_LANG_DIR ) . 'wc-kmercadopago-gpl/wc-kmercadopago-gpl-' . $mp_gpl_locale . '.mo' );
+	load_plugin_textdomain( 'wc-kmercadopago-gpl', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	include_once dirname( __FILE__ ) . '/includes/functions.php';
 endif;

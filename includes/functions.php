@@ -33,7 +33,7 @@ add_filter(
 			$options[ $type['id'] ] = $type['name'];
 		}
 		$fields['billing']['billing_kmercadopagogpl_vat_type'] = array(
-			'label'       => __( 'Identification type', 'wc-kmp-gpl' ),
+			'label'       => __( 'Identification type', 'wc-kmercadopago-gpl' ),
 			'type'        => 'select',
 			'required'    => true,
 			'options'     => $options,
@@ -42,7 +42,7 @@ add_filter(
 			'clear'       => true,
 		);
 		$fields['billing']['billing_kmercadopagogpl_vat']      = array(
-			'label'       => __( 'Identification number', 'wc-kmp-gpl' ),
+			'label'       => __( 'Identification number', 'wc-kmercadopago-gpl' ),
 			'type'        => 'text',
 			'required'    => true,
 			'class'       => apply_filters( 'kmercadopagogpl_form_row_last_field', array( 'form-row-wide', 'form-group', 'col-sm-12', 'col-md-12' ) ),
@@ -65,7 +65,7 @@ function kmercadopagogpl_metabox_cb() {
 add_action(
 	'add_meta_boxes',
 	function() {
-		add_meta_box( 'kmercadopagogpl-metabox', __( 'Data of MercadoPago', 'wc-kmp-gpl' ), 'kmercadopagogpl_metabox_cb', 'shop_order', 'normal', 'high' );
+		add_meta_box( 'kmercadopagogpl-metabox', __( 'Data of MercadoPago', 'wc-kmercadopago-gpl' ), 'kmercadopagogpl_metabox_cb', 'shop_order', 'normal', 'high' );
 	}
 );
 // phpcs:ignore WordPress.Security.NonceVerification
@@ -74,7 +74,7 @@ if ( isset( $_GET['topic'] ) || isset( $_GET['collection_id'] ) ) {
 	if ( isset( $_GET['collection_id'] ) ) {
 		$_GET['topic'] = 'payment';
 		// phpcs:ignore WordPress.Security.NonceVerification
-		$_GET['id']    = (int) $_GET['collection_id'];
+		$_GET['id'] = (int) $_GET['collection_id'];
 	}
 	remove_filter( 'template_redirect', 'redirect_canonical' );
 }
@@ -114,7 +114,7 @@ function do_kmercadopagogpl_hourly_check( $order_id ) {
 		$last_mp_status = WC_KMercadoPagoGPL_Manager::get_metadata( $order_id, 'last_mp_status' );
 		if ( 'pending' === $status || ! $last_mp_status || empty( $last_mp_status ) ) {
 			wp_clear_scheduled_hook( 'do_kmercadopagogpl_hourly_check', array( (int) $order_id ) );
-			$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmp-gpl' ) );
+			$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmercadopago-gpl' ) );
 		} else {
 			$time = WC_KMercadoPagoGPL_Manager::get_metadata(
 				$order_id,
@@ -122,7 +122,7 @@ function do_kmercadopagogpl_hourly_check( $order_id ) {
 			);
 			if ( time() - $time > WC_KMercadoPagoGPL_Manager::get_instance()->get_cancel_hold_in() * 3600 ) {
 				wp_clear_scheduled_hook( 'do_kmercadopagogpl_hourly_check', array( (int) $order_id ) );
-				$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmp-gpl' ) );
+				$order->update_status( 'cancelled', __( 'MercadoPago: Payment canceled due to non-payment.', 'wc-kmercadopago-gpl' ) );
 			}
 		}
 	}
@@ -165,3 +165,28 @@ function kmercadopagogpl_set_device_id_cb() {
 }
 add_action( 'wp_ajax_kmercadopagogpl_set_device_id', 'kmercadopagogpl_set_device_id_cb' );
 add_action( 'wp_ajax_nopriv_kmercadopagogpl_set_device_id', 'kmercadopagogpl_set_device_id_cb' );
+
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_enqueue_script( 'wc-kmercadopagogpl-js', plugins_url( 'mercadopago_script.js', WC_KMercadoPagoGPL::PATH ), array( 'jquery' ), WC_KMercadoPagoGPL::VERSION, true );
+		wp_localize_script(
+			'wc-kmercadopagogpl-js',
+			'wc_kmercadopagogpl_context',
+			array(
+				'token'           => wp_create_nonce( 'kmercadopagogpl_token' ),
+				'ajax_url'        => WC_AJAX::get_endpoint( 'wc_kmercadopagogpl_generate_cart' ),
+				'home_url'        => home_url(),
+				'publickey'       => WC_KMercadoPagoGPL_Manager::get_instance()->get_public_key(),
+				'max_installment' => (int) WC_KMercadoPagoGPL_Basic::get_instance()->get_max_installment(),
+				'messages'        => array(
+					'cc_invalid'                => __( 'Invalid Credit Card Number', 'wc-kmercadopago-gpl' ),
+					'installment_error'         => __( 'Error on MercadoPago', 'wc-kmercadopago-gpl' ),
+					'server_error'              => __( 'Internal server error', 'wc-kmercadopago-gpl' ),
+					'server_loading'            => __( 'Loading...', 'wc-kmercadopago-gpl' ),
+					'mercadopago_not_installed' => __( 'Invalid setting', 'wc-kmercadopago-gpl' ),
+				),
+			)
+		);
+	}
+);

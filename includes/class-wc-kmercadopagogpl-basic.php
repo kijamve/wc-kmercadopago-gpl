@@ -40,7 +40,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 		public function __construct() {
 			$this->id           = 'mercadopagogpl-basic';
 			$this->has_fields   = false;
-			$this->method_title = __( 'MercadoPago', 'wc-kmp-gpl' );
+			$this->method_title = __( 'MercadoPago', 'wc-kmercadopago-gpl' );
 
 			// Load the settings.
 			$this->init_settings();
@@ -82,13 +82,13 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 
 			if ( $this->mp_fee > 0.0 && $this->mp_fee_amount > 0.0 ) {
 				// translators: %1$s%: % of fee amount, %2$s%: Fixed fee amount.
-				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%1$s%% + %2$s of fee</b>.', 'wc-kmp-gpl' ), $this->mp_fee, wc_price( $this->mp_fee_amount ) );
+				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%1$s%% + %2$s of fee</b>.', 'wc-kmercadopago-gpl' ), $this->mp_fee, wc_price( $this->mp_fee_amount ) );
 			} elseif ( $this->mp_fee > 0.0 && $this->mp_fee_amount <= 0.0 ) {
 				// translators: %1$s%: % of fee amount.
-				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%s% of fee</b>.', 'wc-kmp-gpl' ), $this->mp_fee );
+				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%s% of fee</b>.', 'wc-kmercadopago-gpl' ), $this->mp_fee );
 			} elseif ( $this->mp_fee <= 0.0 && $this->mp_fee_amount > 0.0 ) {
 				// translators: %2$s%: fee amount.
-				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%s of fee</b>.', 'wc-kmp-gpl' ), wc_price( $this->mp_fee_amount ) );
+				$this->description .= '<br />' . sprintf( __( 'This payment method has a <b>%s of fee</b>.', 'wc-kmercadopago-gpl' ), wc_price( $this->mp_fee_amount ) );
 			}
 		}
 
@@ -362,10 +362,10 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 				);
 			}
 			// translators: %s: order ID.
-			$args['additional_info'] = sprintf( __( 'Order %s', 'wc-kmp-gpl' ), wp_strip_all_tags( $order->get_order_number() ) );
+			$args['additional_info'] = sprintf( __( 'Order %s', 'wc-kmercadopago-gpl' ), wp_strip_all_tags( $order->get_order_number() ) );
 			if ( abs( $fee ) > 0.01 ) {
 				// translators: %s: Fee Amount.
-				$args['additional_info'] .= ' - ' . sprintf( __( 'Fee: %s', 'wc-kmp-gpl' ), wp_strip_all_tags( self::showPrice( round( $fee, 2 ) ) ) );
+				$args['additional_info'] .= ' - ' . sprintf( __( 'Fee: %s', 'wc-kmercadopago-gpl' ), wp_strip_all_tags( self::showPrice( round( $fee, 2 ) ) ) );
 			}
 			$args['additional_info']  .= ' => ' . $title;
 			$args['items'][0]['title'] = substr( $args['additional_info'], 0, 115 );
@@ -478,7 +478,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$order = new WC_Order( $order_id );
 
 			if ( WC_KMercadoPagoGPL_Manager::get_instance()->get_on_hold() ) {
-				$order->update_status( 'on-hold', __( 'MercadoPago: Wait payment...', 'wc-kmp-gpl' ) );
+				$order->update_status( 'on-hold', __( 'MercadoPago: Wait payment...', 'wc-kmercadopago-gpl' ) );
 			}
 
 			$url = $this->get_mercadopago_url( $order );
@@ -487,11 +487,11 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 				// phpcs:ignore WordPress.WP.EnqueuedResources.NonEnqueuedScript
 				echo '<script type="text/javascript" src="https://secure.mlstatic.com/mptools/render.js"></script>';
 				echo '<script type="text/javascript">(function() { $MPC.openCheckout({ url: "' . esc_url( $url ) . '", mode: "modal" }); })();</script>';
-				echo '<p>' . esc_html( __( 'Thank you for your order, please click the button below to pay with MercadoPago.', 'wc-kmp-gpl' ) ) . '</p>';
-				echo '<a id="submit-payment" href="' . esc_url( $url ) . '" name="MP-Checkout" class="button alt" mp-mode="modal">' . esc_html( __( 'Pay on MercadoPago', 'wc-kmp-gpl' ) ) . '</a> <a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Cancel order &amp; restore cart', 'wc-kmp-gpl' ) ) . '</a>';
+				echo '<p>' . esc_html( __( 'Thank you for your order, please click the button below to pay with MercadoPago.', 'wc-kmercadopago-gpl' ) ) . '</p>';
+				echo '<a id="submit-payment" href="' . esc_url( $url ) . '" name="MP-Checkout" class="button alt" mp-mode="modal">' . esc_html( __( 'Pay on MercadoPago', 'wc-kmercadopago-gpl' ) ) . '</a> <a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Cancel order &amp; restore cart', 'wc-kmercadopago-gpl' ) ) . '</a>';
 			} else {
-				echo '<p>' . esc_html( __( 'There was a problem with MercadoPago, try again later or contact our team.', 'wc-kmp-gpl' ) ) . '</p>';
-				echo '<a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Go to cart', 'wc-kmp-gpl' ) ) . '</a>';
+				echo '<p>' . esc_html( __( 'There was a problem with MercadoPago, try again later or contact our team.', 'wc-kmercadopago-gpl' ) ) . '</p>';
+				echo '<a class="button cancel" href="' . esc_url( $order->get_cancel_order_url() ) . '">' . esc_html( __( 'Go to cart', 'wc-kmercadopago-gpl' ) ) . '</a>';
 			}
 		}
 
@@ -511,32 +511,6 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 		}
 
 		/**
-		 * Load JS for MercadoPago.
-		 *
-		 * @return void.
-		 */
-		public function hook_js() {
-			wp_enqueue_script( 'wc-kmercadopagogpl-js', plugins_url( 'mercadopago_script.js', WC_KMercadoPagoGPL::PATH ), array( 'jquery' ), WC_KMercadoPagoGPL::VERSION, true );
-			wp_localize_script(
-				'wc-kmercadopagogpl-js',
-				'wc_kmercadopagogpl_context',
-				array(
-					'token'           => wp_create_nonce( 'kmercadopagogpl_token' ),
-					'ajax_url'        => WC_AJAX::get_endpoint( 'wc_kmercadopagogpl_generate_cart' ),
-					'home_url'        => home_url(),
-					'publickey'       => WC_KMercadoPagoGPL_Manager::get_instance()->get_public_key(),
-					'max_installment' => (int) $this->get_max_installment(),
-					'messages'        => array(
-						'cc_invalid'                => __( 'Invalid Credit Card Number', 'wc-kmp-gpl' ),
-						'installment_error'         => __( 'Error on MercadoPago', 'wc-kmp-gpl' ),
-						'server_error'              => __( 'Internal server error', 'wc-kmp-gpl' ),
-						'server_loading'            => __( 'Loading...', 'wc-kmp-gpl' ),
-						'mercadopago_not_installed' => __( 'Invalid setting', 'wc-kmp-gpl' ),
-					),
-				)
-			);
-		}
-		/**
 		 * Process the payment and return the result.
 		 *
 		 * @param int $order_id Order ID.
@@ -547,7 +521,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 			$order = new WC_Order( $order_id );
 			if ( 'redirect' === $this->method ) {
 				if ( WC_KMercadoPagoGPL_Manager::get_instance()->get_on_hold() ) {
-					$order->update_status( 'on-hold', __( 'MercadoPago: Wait payment.', 'wc-kmp-gpl' ) );
+					$order->update_status( 'on-hold', __( 'MercadoPago: Wait payment.', 'wc-kmercadopago-gpl' ) );
 				}
 				return array(
 					'result'   => 'success',
@@ -585,11 +559,11 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Basic' ) ) :
 				var product_price_mpgpl = <?php echo (float) $price; ?>;
 			</script>
 			<div class="row">
-				<div class="col-md-12"><b><?php echo esc_html( __( 'Enter the first six digits of your credit card to calculate the fees:', 'wc-kmp-gpl' ) ); ?></b></div><br />
+				<div class="col-md-12"><b><?php echo esc_html( __( 'Enter the first six digits of your credit card to calculate the fees:', 'wc-kmercadopago-gpl' ) ); ?></b></div><br />
 				<div class="col-md-12">
 					<input type="text" class="input-text text" size="4" pattern="[0-9]*" inputmode="numeric" style="width: 100px;padding: 5px;" maxlength="6" id="inputSixTDCMPGPL"  />
 					<button class="button alt" style="float:none;" id="btn_mpgpl_calc_instalments" type="button">
-						<?php echo esc_html( __( 'Calculate', 'wc-kmp-gpl' ) ); ?>
+						<?php echo esc_html( __( 'Calculate', 'wc-kmercadopago-gpl' ) ); ?>
 					</button>
 				</div>
 				<br /><br />

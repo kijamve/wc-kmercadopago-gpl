@@ -4,7 +4,7 @@ Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,9 +33,9 @@ Automatic Installation by WordPress admin
 Done! It will be in the "Installed Plugins" section and from there you can activate it.
 
 Manual Installation
-1. Download the [zip] (https://github.com/kijamve/wc-kmp-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/wc-kmp-gpl/)
-2. Unzip the folder and rename it to ”wc-kmp-gpl”
-3. Copy the "wc-kmp-gpl" file into your WordPress directory, inside the "Plugins" folder.
+1. Download the [zip] (https://github.com/kijamve/wc-kmercadopago-gpl/releases) now or from the o WordPress Module [Directory] (https://es.wordpress.org/plugins/wc-kmercadopago-gpl/)
+2. Unzip the folder and rename it to ”wc-kmercadopago-gpl”
+3. Copy the "wc-kmercadopago-gpl" file into your WordPress directory, inside the "Plugins" folder.
 
 Done!
 
