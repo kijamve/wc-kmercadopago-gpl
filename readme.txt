@@ -42,7 +42,7 @@ Com este plug-in, você pode:
 - O rastreamento de segurança javascript é adicionado do MercadoPago, este rastreamento irá ajudá-lo a reduzir pagamentos devido ao risco de fraude.
 - Desative algumas opções de pagamento, por exemplo: Cartões de Débito, Transferências, etc.
 
-No momento, só é possível usar o checkout básico (versão Pro), não inclui checkout personalizado ou checkout personalizado.
+No momento, só é possível usar o checkout básico (versão Pro), não inclui checkout personalizado ou custom checkout.
 
 == Installation ==
 = Minimum Technical Requirements =
