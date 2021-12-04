@@ -11,6 +11,31 @@
  */
 
 add_action(
+	'admin_notices',
+	function() {
+		if ( is_admin() && current_user_can( 'manage_options' ) ) {
+			if ( isset( $_GET['nonce'] ) && isset( $_GET['kmercadopagogpl_ignore_review'] ) ) {
+				$nonce = sanitize_text_field( wp_unslash( $_GET['nonce'] ) );
+				if ( wp_verify_nonce( $nonce, 'kmercadopagogpl_ignore_review' ) ) {
+					update_option( 'kmercadopagogpl_ignore_review', '1' );
+				}
+			}
+			$installed = (int) get_option( 'kmercadopagogpl_installed_date', '0' );
+			if ( 0 === $installed ) {
+				update_option( 'kmercadopagogpl_installed_date', time() );
+			} elseif ( time() - $installed > 7 * 24 * 3600 ) {
+				$ignore = (bool) get_option( 'kmercadopagogpl_ignore_review', '0' );
+				if ( ! $ignore ) {
+					echo '<div class="notice"><p><strong>' . esc_html( __( 'MercadoPago Review', 'wc-kmercadopago-gpl' ) ) . '</strong>: ';
+					echo esc_html( __( 'We note that you have been using the Tools for MercadoPago by Kijam López plugin for a while. We would appreciate very much if you leave a review so that the rest of the community knows more about us:', 'wc-kmercadopago-gpl' ) ) . ' ';
+					echo '<a href="https://wordpress.org/support/plugin/wc-kmercadopago-gpl/reviews/#new-post" target="_blank" style="color:red">' . esc_html( __( 'Leave Review', 'wc-kmercadopago-gpl' ) ) . '</a> - <a href="index.php?nonce=' . esc_html( wp_create_nonce( 'kmercadopagogpl_ignore_review' ) ) . '&kmercadopagogpl_ignore_review">' . esc_html( __( 'Done (Thank you very much) / Ignore this message', 'wc-kmercadopago-gpl' ) ) . '</a></p></div>';
+				}
+			}
+		}
+	}
+);
+
+add_action(
 	'woocommerce_after_add_to_cart_button',
 	function() {
 		$woocommerce = WC_KMercadoPagoGPL::woocommerce_instance();

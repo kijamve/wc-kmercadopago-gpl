@@ -5,7 +5,7 @@
  * Description: Tools for MercadoPago and WooCommerce by Kijam
  * Author: Kijam López
  * Author URI: https://kijam.com/
- * Version: 1.0.3
+ * Version: 1.0.4
  * License: GPLv2
  * Text Domain: wc-kmercadopago-gpl
  * Domain Path: /languages/
@@ -31,7 +31,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL' ) ) :
 		*
 		* @var string
 		*/
-		const VERSION = '1.0.3';
+		const VERSION = '1.0.4';
 
 		/**
 		* Plugin Path.
