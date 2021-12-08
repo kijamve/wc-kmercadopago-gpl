@@ -187,7 +187,7 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				// phpcs:ignore WordPress.Security.NonceVerification
 				if ( current_user_can( 'manage_options' ) && isset( $_POST['woocommerce_kmercadopagogpl-manager_token'] ) ) {
 					// phpcs:ignore WordPress.Security.NonceVerification
-					self::$token = esc_html( $_POST['woocommerce_kmercadopagogpl-manager_token'] );
+					self::$token = sanitize_text_field( wp_unslash( $_POST['woocommerce_kmercadopagogpl-manager_token'] ) );
 				}
 				if ( empty( self::$token ) ) {
 					add_action( 'admin_notices', array( $this, 'client_secret_missing_message' ) );
@@ -318,7 +318,6 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 				<?php
 			}
 			?>
-			<input type="hidden" id="deviceMpId" />
 			<script>
 				var mp_device_id = <?php echo wp_json_encode( $device_id ); ?>;
 				setInterval(function() {
@@ -351,22 +350,22 @@ if ( ! class_exists( 'WC_KMercadoPagoGPL_Manager' ) ) :
 			}
 
 			if ( is_product() ) {
-				return str_replace( ' src', '  output="deviceMpId" defer view="item" src', $tag );
+				return str_replace( ' src', ' defer view="item" src', $tag );
 			}
 
 			if ( is_home() || is_front_page() ) {
-				return str_replace( ' src', ' output="deviceMpId" defer view="home" src', $tag );
+				return str_replace( ' src', ' defer view="home" src', $tag );
 			}
 
 			if ( is_category() || is_product_category() ) {
-				return str_replace( ' src', ' output="deviceMpId" defer view="search" src', $tag );
+				return str_replace( ' src', ' defer view="search" src', $tag );
 			}
 
 			if ( is_checkout() ) {
-				return str_replace( ' src', ' output="deviceMpId" defer view="checkout" src', $tag );
+				return str_replace( ' src', ' defer view="checkout" src', $tag );
 			}
 
-			return str_replace( ' src', ' output="deviceMpId" defer src', $tag );
+			return str_replace( ' src', ' defer src', $tag );
 		}
 
 		/**

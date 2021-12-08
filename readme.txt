@@ -4,7 +4,7 @@ Tags: ecommerce, mercadopago, woocommerce
 Requires at least: 4.9.10
 Tested up to: 5.8
 Requires PHP: 5.6
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,12 +17,12 @@ Con este plug-in podrás:
 - Añadir una comisión por usar MercadoPago
 - Asignar un tiempo máximo de espera para los pedidos sin completar, estos se cancelarán al expirar el tiempo establecido.
 - Asignar un tiempo máximo de espera para los pedidos completados que quedan en pendiente, estos se cancelaran al expirar el tiempo establecido.
-- Posibilidad de solicitar el DNI al cliente en el checkout. Te ayudara a disminuir los pagos por concepto de riesgo de fraude.
+- Posibilidad de solicitar el DNI al cliente en el checkout. Te ayudara a disminuir el rechazo de pagos por concepto de riesgo de fraude.
 - Limitar la cantidad máximas de cuotas que aceptaras.
 - Mostrar calculadora de cuotas en la ficha de producto y/o en el checkout.
 - Podrás cambiar el Nombre de la pasarela de pago.
 - Podrás cambiar la descripción de la pasarela de pago, con la posibilidad de incrustar HTML en este campo.
-- Se añade javascript de rastreo de seguridad desde MercadoPago, este tracking te ayudara a disminuir los pagos por concepto de riesgo de fraude.
+- Se añade javascript de rastreo de seguridad desde MercadoPago, este tracking te ayudara a disminuir el rechazo de pagos por concepto de riesgo de fraude.
 - Desactivar algunas opciones de pago, por ejemplo: Tarjetas de Débito, transferencias, etc.
 
 Por el momento, solo es posible usar el checkout basico (Version Pro), no incluye checkout personalizado o custom checkout.
@@ -33,13 +33,13 @@ O plugin Tools for MercadoPago e WooCommerce permite processar pagamentos para s
 Com este plug-in, você pode:
 - Adicione uma comissão pelo uso do MercadoPago
 - Atribuir um tempo máximo de espera para pedidos não atendidos, estes serão cancelados no final do tempo estabelecido.
-- Atribuir um tempo máximo de espera aos pedidos concluídos e pendentes, estes serão cancelados no fim do tempo estabelecido.
-- Possibilidade de solicitar o DNI do cliente no checkout. Isso o ajudará a reduzir os pagamentos devido ao risco de fraude.
+- Atribuir um tempo máximo de espera às encomendas concluídas e pendentes, estas serão canceladas no fim do tempo estabelecido.
+- Possibilidade de solicitar o DNI do cliente no checkout. Isso o ajudará a reduzir a rejeição de pagamentos devido ao risco de fraude.
 - Limite a quantidade máxima de cotas que você aceitará.
 - Mostrar calculadora de cotas na ficha do produto e / ou na finalização da compra.
 - Você pode alterar o nome do portal de pagamento.
 - Você pode alterar a descrição da plataforma de pagamento, com a possibilidade de embutir HTML neste campo.
-- O rastreamento de segurança javascript é adicionado do MercadoPago, este rastreamento irá ajudá-lo a reduzir pagamentos devido ao risco de fraude.
+- O rastreamento de segurança javascript é adicionado do MercadoPago, este rastreamento ajudará você a reduzir a rejeição de pagamentos devido ao risco de fraude.
 - Desative algumas opções de pagamento, por exemplo: Cartões de Débito, Transferências, etc.
 
 No momento, só é possível usar o checkout básico (versão Pro), não inclui checkout personalizado ou custom checkout.
